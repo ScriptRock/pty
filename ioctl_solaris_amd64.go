@@ -15,5 +15,5 @@ func init() {
 }
 
 func ioctl(fd, cmd, ptr uintptr) error {
-	return unix.IoctlSetInt(int(fd), int(cmd), int(ptr))
+	return unix.IoctlSetInt(int(fd), uint(cmd), int(ptr))
 }
